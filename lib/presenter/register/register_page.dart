@@ -1,5 +1,6 @@
 import 'package:doginfo/presenter/login/widgets/dog_text_form.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:lottie/lottie.dart';
 
 class RegisterPage extends StatelessWidget {
@@ -25,7 +26,7 @@ class RegisterPage extends StatelessWidget {
               horizontal: 20.0,
             ),
             child: SizedBox(
-              height: screenHeight * 0.38,
+              height: screenHeight * 0.40,
               child: Card(
                 elevation: 4,
                 shape: RoundedRectangleBorder(
@@ -39,13 +40,20 @@ class RegisterPage extends StatelessWidget {
                   child: Column(
                     children: [
                       Align(
-                        alignment: Alignment.topLeft,
+                        alignment: Alignment.center,
                         child: Text(
-                          'Seja bem vindo!',
-                          style: TextStyle(
-                              color: Colors.grey[800],
-                              fontSize: 16,
-                              fontWeight: FontWeight.w200),
+                          'INFO PET',
+                          style: GoogleFonts.luckiestGuy().copyWith(
+                            color: Colors.blueGrey,
+                            fontSize: 32,
+                            shadows: [
+                              const Shadow(
+                                blurRadius: 5.0,
+                                color: Colors.grey,
+                                offset: Offset(1.0, 1.5),
+                              ),
+                            ],
+                          ),
                         ),
                       ),
                       SizedBox(

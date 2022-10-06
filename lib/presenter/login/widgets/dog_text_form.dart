@@ -36,8 +36,9 @@ class DogTextForm extends StatelessWidget {
             fillColor: Colors.grey[200],
             labelStyle: const TextStyle(fontSize: 15, color: Colors.black),
             border: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(5),
-                borderSide: BorderSide.none),
+              borderSide: const BorderSide(width: 1, color: Colors.grey),
+              borderRadius: BorderRadius.circular(5),
+            ),
             errorBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(5),
               borderSide: const BorderSide(

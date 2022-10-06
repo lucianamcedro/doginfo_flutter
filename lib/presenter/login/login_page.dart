@@ -3,6 +3,7 @@ import 'package:doginfo/presenter/pages.dart';
 import 'package:flutter_signin_button/flutter_signin_button.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({Key? key}) : super(key: key);
@@ -21,13 +22,13 @@ class LoginPage extends StatelessWidget {
           ),
         ),
         child: Column(children: [
-          Lottie.asset('assets/images/corgi.json', height: 350),
+          Lottie.asset('assets/images/corgi.json', height: 320),
           Padding(
             padding: const EdgeInsets.symmetric(
               horizontal: 20.0,
             ),
             child: SizedBox(
-              height: screenHeight * 0.50,
+              height: screenHeight * 0.51,
               child: Card(
                 elevation: 4,
                 shape: RoundedRectangleBorder(
@@ -41,13 +42,20 @@ class LoginPage extends StatelessWidget {
                   child: Column(
                     children: [
                       Align(
-                        alignment: Alignment.topLeft,
+                        alignment: Alignment.center,
                         child: Text(
-                          'Bem vindo de volta!',
-                          style: TextStyle(
-                              color: Colors.grey[800],
-                              fontSize: 16,
-                              fontWeight: FontWeight.w200),
+                          'INFO PET',
+                          style: GoogleFonts.luckiestGuy().copyWith(
+                            color: Colors.blueGrey,
+                            fontSize: 32,
+                            shadows: [
+                              const Shadow(
+                                blurRadius: 5.0,
+                                color: Colors.grey,
+                                offset: Offset(1.0, 1.5),
+                              ),
+                            ],
+                          ),
                         ),
                       ),
                       SizedBox(
@@ -120,10 +128,10 @@ class LoginPage extends StatelessWidget {
                               height: screenHeight * 0.02,
                             ),
                             Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceAround,
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
                                 SizedBox(
-                                  width: 160,
+                                  width: 170,
                                   height: 45,
                                   child: SignInButton(
                                     Buttons.Google,
@@ -135,7 +143,7 @@ class LoginPage extends StatelessWidget {
                                   ),
                                 ),
                                 SizedBox(
-                                  width: 160,
+                                  width: 170,
                                   height: 45,
                                   child: SignInButton(
                                     Buttons.Facebook,
