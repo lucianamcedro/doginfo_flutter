@@ -1,50 +1,22 @@
-import 'dart:io';
-
 import 'package:doginfo/presenter/login/login_page.dart';
-import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart';
 
-class SplashPage extends StatefulWidget {
+import 'package:flutter/material.dart';
+import 'package:lottie/lottie.dart';
+import 'package:animated_splash_screen/animated_splash_screen.dart';
+import 'package:page_transition/page_transition.dart';
+
+class SplashPage extends StatelessWidget {
   const SplashPage({Key? key}) : super(key: key);
 
   @override
-  State<SplashPage> createState() => _SplashPageState();
-}
-
-class _SplashPageState extends State<SplashPage> {
-  @override
-  void initState() {
-    super.initState();
-    Future.delayed(const Duration(seconds: 3), () {
-      Navigator.pushReplacement(
-          context, MaterialPageRoute(builder: (context) => const LoginPage()));
-    });
-  }
-
-  @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.amber,
-      body: Center(
-        child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
-          Image.asset(
-            'assets/images/screen.png',
-            height: 300,
-            width: 400,
-          ),
-          const SizedBox(
-            height: 30,
-          ),
-          if (Platform.isIOS)
-            const CupertinoActivityIndicator(
-              radius: 15,
-            )
-          else
-            const CircularProgressIndicator(
-              color: Colors.white,
-            ),
-        ]),
-      ),
-    );
+    return AnimatedSplashScreen(
+        duration: 1800,
+        centered: true,
+        splash: Lottie.asset('assets/images/paws.json'),
+        splashIconSize: 650,
+        pageTransitionType: PageTransitionType.rightToLeftWithFade,
+        backgroundColor: Colors.amber,
+        nextScreen: const LoginPage());
   }
 }
