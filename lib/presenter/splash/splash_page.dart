@@ -16,6 +16,6 @@ class SplashPage extends StatelessWidget {
         splashIconSize: 650,
         pageTransitionType: PageTransitionType.rightToLeftWithFade,
         backgroundColor: Colors.amber,
-        nextScreen: const LoginPage());
+        nextScreen: HomePage());
   }
 }
