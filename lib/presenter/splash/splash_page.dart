@@ -1,5 +1,4 @@
-import 'package:doginfo/presenter/login/login_page.dart';
-
+import 'package:doginfo/presenter/pages.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 import 'package:animated_splash_screen/animated_splash_screen.dart';

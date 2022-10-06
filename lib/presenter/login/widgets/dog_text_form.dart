@@ -32,12 +32,14 @@ class DogTextForm extends StatelessWidget {
           validator: validator,
           decoration: InputDecoration(
             labelText: label,
+            filled: true,
+            fillColor: Colors.grey[200],
             labelStyle: const TextStyle(fontSize: 15, color: Colors.black),
             border: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(10),
-            ),
+                borderRadius: BorderRadius.circular(5),
+                borderSide: BorderSide.none),
             errorBorder: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(10),
+              borderRadius: BorderRadius.circular(5),
               borderSide: const BorderSide(
                 color: Colors.red,
               ),
