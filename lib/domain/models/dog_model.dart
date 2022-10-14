@@ -4,6 +4,7 @@ class DogModel {
   final String id;
   final String nome;
   final String img;
+  final String avatar;
   final String descricao;
   final String comportamento;
   final String historia;
@@ -14,6 +15,7 @@ class DogModel {
     required this.id,
     required this.nome,
     required this.img,
+    required this.avatar,
     required this.descricao,
     required this.comportamento,
     required this.historia,
@@ -26,6 +28,7 @@ class DogModel {
     return <String, dynamic>{
       'id': id,
       'nome': nome,
+      'avatar': avatar,
       'img': img,
       'descricao': descricao,
       'comportamento': comportamento,
@@ -41,6 +44,7 @@ class DogModel {
       id: map['id'],
       nome: map['nome'],
       img: map['img'],
+      avatar: map['avatar'],
       descricao: map['descricao'],
       comportamento: map['comportamento'],
       historia: map['historia'],
