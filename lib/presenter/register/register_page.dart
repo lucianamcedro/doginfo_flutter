@@ -26,7 +26,7 @@ class RegisterPage extends StatelessWidget {
               horizontal: 20.0,
             ),
             child: SizedBox(
-              height: screenHeight * 0.40,
+              height: screenHeight * 0.42,
               child: Card(
                 elevation: 4,
                 shape: RoundedRectangleBorder(
@@ -64,12 +64,14 @@ class RegisterPage extends StatelessWidget {
                           children: [
                             DogTextForm(
                               label: 'E-mail',
+                              icon: const Icon(Icons.email),
                             ),
                             SizedBox(
                               height: screenHeight * 0.01,
                             ),
                             DogTextForm(
                               label: 'Senha',
+                              icon: const Icon(Icons.lock),
                               obscureText: true,
                             ),
                             SizedBox(
@@ -77,6 +79,7 @@ class RegisterPage extends StatelessWidget {
                             ),
                             DogTextForm(
                               label: 'Confirmar Senha',
+                              icon: const Icon(Icons.lock),
                               obscureText: true,
                             ),
                             SizedBox(

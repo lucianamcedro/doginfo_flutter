@@ -21,149 +21,154 @@ class LoginPage extends StatelessWidget {
             fit: BoxFit.cover,
           ),
         ),
-        child: Column(children: [
-          Lottie.asset('assets/images/corgi.json', height: 320),
-          Padding(
-            padding: const EdgeInsets.symmetric(
-              horizontal: 20.0,
-            ),
-            child: SizedBox(
-              height: screenHeight * 0.51,
-              child: Card(
-                elevation: 4,
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(10.0),
-                ),
-                child: Padding(
-                  padding: EdgeInsets.symmetric(
-                    horizontal: 10.0,
-                    vertical: screenHeight * 0.03,
+        child: Column(
+          children: [
+            Lottie.asset('assets/images/corgi.json', height: 320),
+            Padding(
+              padding: const EdgeInsets.symmetric(
+                horizontal: 20.0,
+              ),
+              child: SizedBox(
+                height: screenHeight * 0.52,
+                child: Card(
+                  elevation: 4,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10.0),
                   ),
-                  child: Column(
-                    children: [
-                      Align(
-                        alignment: Alignment.center,
-                        child: Text(
-                          'INFO PET',
-                          style: GoogleFonts.luckiestGuy().copyWith(
-                            color: Colors.blueGrey,
-                            fontSize: 32,
-                            shadows: [
-                              const Shadow(
-                                blurRadius: 5.0,
-                                color: Colors.grey,
-                                offset: Offset(1.0, 1.5),
-                              ),
-                            ],
+                  child: Padding(
+                    padding: EdgeInsets.symmetric(
+                      horizontal: 10.0,
+                      vertical: screenHeight * 0.03,
+                    ),
+                    child: Column(
+                      children: [
+                        Align(
+                          alignment: Alignment.center,
+                          child: Text(
+                            'INFO PET',
+                            style: GoogleFonts.luckiestGuy().copyWith(
+                              color: Colors.blueGrey,
+                              fontSize: 32,
+                              shadows: [
+                                const Shadow(
+                                  blurRadius: 5.0,
+                                  color: Colors.grey,
+                                  offset: Offset(1.0, 1.5),
+                                ),
+                              ],
+                            ),
                           ),
                         ),
-                      ),
-                      SizedBox(
-                        height: screenHeight * 0.01,
-                      ),
-                      Form(
-                        child: Column(
-                          children: [
-                            DogTextForm(
-                              label: 'E-mail',
-                            ),
-                            SizedBox(
-                              height: screenHeight * 0.01,
-                            ),
-                            DogTextForm(
-                              label: 'Senha',
-                              obscureText: true,
-                            ),
-                            Align(
-                              alignment: Alignment.topRight,
-                              child: TextButton(
-                                onPressed: () {},
-                                child: Text(
-                                  'Esqueceu sua senha?',
-                                  style: TextStyle(color: Colors.red[200]),
-                                ),
+                        SizedBox(
+                          height: screenHeight * 0.01,
+                        ),
+                        Form(
+                          child: Column(
+                            children: [
+                              DogTextForm(
+                                label: 'E-mail',
+                                icon: const Icon(Icons.email),
                               ),
-                            ),
-                            ElevatedButton(
-                              style: ElevatedButton.styleFrom(
-                                minimumSize: Size(screenHeight * 0.4, 50),
-                                backgroundColor: Colors.blueGrey,
+                              SizedBox(
+                                height: screenHeight * 0.01,
                               ),
-                              onPressed: () {},
-                              child: const Text(
-                                'ENTRAR',
-                                style: TextStyle(
-                                    fontSize: 15, fontWeight: FontWeight.w600),
+                              DogTextForm(
+                                label: 'Senha',
+                                obscureText: true,
+                                icon: const Icon(Icons.lock),
                               ),
-                            ),
-                            SizedBox(
-                              height: screenHeight * 0.02,
-                            ),
-                            Row(
-                              children: [
-                                Expanded(
-                                  child: Container(
-                                    height: 1.0,
-                                    color: Colors.grey,
+                              Align(
+                                alignment: Alignment.topRight,
+                                child: TextButton(
+                                  onPressed: () {},
+                                  child: Text(
+                                    'Esqueceu sua senha?',
+                                    style: TextStyle(color: Colors.red[200]),
                                   ),
                                 ),
-                                const Padding(
-                                  padding: EdgeInsets.only(left: 10, right: 10),
-                                  child: Text(
-                                    'OU ENTRAR COM',
-                                    style: TextStyle(
+                              ),
+                              ElevatedButton(
+                                style: ElevatedButton.styleFrom(
+                                  minimumSize: Size(screenHeight * 0.4, 50),
+                                  backgroundColor: Colors.blueGrey,
+                                ),
+                                onPressed: () {
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) => HomePage()));
+                                },
+                                child: const Text(
+                                  'ENTRAR',
+                                  style: TextStyle(
+                                      fontSize: 15,
+                                      fontWeight: FontWeight.w600),
+                                ),
+                              ),
+                              SizedBox(
+                                height: screenHeight * 0.02,
+                              ),
+                              Row(
+                                children: [
+                                  Expanded(
+                                    child: Container(
+                                      height: 1.0,
                                       color: Colors.grey,
                                     ),
                                   ),
-                                ),
-                                Expanded(
-                                  child: Container(
-                                    height: 1.0,
-                                    color: Colors.grey,
-                                  ),
-                                ),
-                              ],
-                            ),
-                            SizedBox(
-                              height: screenHeight * 0.02,
-                            ),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                SizedBox(
-                                  width: 170,
-                                  height: 45,
-                                  child: SignInButton(
-                                    Buttons.Google,
-                                    shape: RoundedRectangleBorder(
-                                      borderRadius: BorderRadius.circular(10),
+                                  const Padding(
+                                    padding:
+                                        EdgeInsets.only(left: 10, right: 10),
+                                    child: Text(
+                                      'OU ENTRAR COM',
+                                      style: TextStyle(
+                                        color: Colors.grey,
+                                      ),
                                     ),
-                                    onPressed: () {},
-                                    text: 'Google',
                                   ),
-                                ),
-                                SizedBox(
-                                  width: 170,
-                                  height: 45,
-                                  child: SignInButton(
-                                    Buttons.Facebook,
-                                    shape: RoundedRectangleBorder(
-                                      borderRadius: BorderRadius.circular(10),
+                                  Expanded(
+                                    child: Container(
+                                      height: 1.0,
+                                      color: Colors.grey,
                                     ),
-                                    onPressed: () {},
-                                    text: 'Facebook',
                                   ),
-                                ),
-                              ],
-                            ),
-                            SizedBox(
-                              height: screenHeight * 0.01,
-                            ),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                const Text('Não tem conta?'),
-                                TextButton(
+                                ],
+                              ),
+                              Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  SizedBox(
+                                    width: 160,
+                                    height: 45,
+                                    child: SignInButton(
+                                      Buttons.Google,
+                                      shape: RoundedRectangleBorder(
+                                        borderRadius: BorderRadius.circular(10),
+                                      ),
+                                      onPressed: () {},
+                                      text: 'Google',
+                                    ),
+                                  ),
+                                  SizedBox(
+                                    width: 160,
+                                    height: 45,
+                                    child: SignInButton(
+                                      Buttons.Facebook,
+                                      shape: RoundedRectangleBorder(
+                                        borderRadius: BorderRadius.circular(10),
+                                      ),
+                                      onPressed: () {},
+                                      text: 'Facebook',
+                                    ),
+                                  ),
+                                ],
+                              ),
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  const Text('Não tem conta?'),
+                                  TextButton(
                                     onPressed: () {
                                       Navigator.push(
                                           context,
@@ -171,19 +176,21 @@ class LoginPage extends StatelessWidget {
                                               builder: (context) =>
                                                   const RegisterPage()));
                                     },
-                                    child: const Text('Cadastre-se'))
-                              ],
-                            ),
-                          ],
+                                    child: const Text('Cadastre-se'),
+                                  ),
+                                ],
+                              ),
+                            ],
+                          ),
                         ),
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
                 ),
               ),
             ),
-          ),
-        ]),
+          ],
+        ),
       ),
     );
   }
