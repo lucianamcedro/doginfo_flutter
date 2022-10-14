@@ -8,13 +8,15 @@ class DogTextForm extends StatelessWidget {
   final ValueNotifier<bool> obscureTextVN;
   final TextEditingController? controller;
   final FormFieldValidator<String>? validator;
+  final Icon? icon;
   DogTextForm(
       {Key? key,
       required this.label,
       this.obscureText = false,
       this.suffixIconButton,
       this.controller,
-      this.validator})
+      this.validator,
+      this.icon})
       : assert(
           obscureText == true ? suffixIconButton == null : true,
           'Obscure Text não pode ser enviado em conjunto com SuffixIconButton',
@@ -33,6 +35,7 @@ class DogTextForm extends StatelessWidget {
           decoration: InputDecoration(
             labelText: label,
             filled: true,
+            prefixIcon: icon,
             fillColor: Colors.grey[200],
             labelStyle: const TextStyle(fontSize: 15, color: Colors.black),
             border: OutlineInputBorder(

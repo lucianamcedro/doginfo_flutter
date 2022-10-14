@@ -72,16 +72,4 @@ class HomeCards extends StatelessWidget {
       ),
     );
   }
-// }
-// Align(
-//             alignment: Alignment.topLeft,
-//             child: Padding(
-//               padding: const EdgeInsets.only(left: 20.0),
-//               child: Text(
-//                 'Dog\'s',
-//                 style: GoogleFonts.titanOne()
-//                     .copyWith(color: Colors.grey[800], fontSize: 25),
-//               ),
-//             ),
-//           ),
 }
