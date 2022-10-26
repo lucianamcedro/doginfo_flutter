@@ -42,8 +42,16 @@ class HomePage extends StatelessWidget {
           ),
         ),
       ),
-      body: Column(
-        children: const [HomeHeader(), HomeCards()],
+      body: ListTile(
+        title: ListView(
+          scrollDirection: Axis.vertical,
+          shrinkWrap: true,
+          physics: const BouncingScrollPhysics(),
+          children: const [
+            HomeHeader(),
+            HomeCards(),
+          ],
+        ),
       ),
     );
   }
