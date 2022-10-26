@@ -1,3 +1,4 @@
+import 'dart:convert';
 import 'dart:developer';
 
 import 'package:dio/dio.dart';
@@ -8,10 +9,15 @@ import './dogs_repository.dart';
 
 class DogsRepositoryImpl implements DogsRepository {
   @override
-  Future<DogModel> getDogs() async {
+  Future<List<DogModel>> getDogs() async {
     try {
-      final result = await Dio().get(ApiConsts.baseUrl);
-      return DogModel.fromMap(result.data);
+      dynamic result;
+      result = await Dio().get(ApiConsts.baseUrl);
+      final dados = result.data as List;
+
+      final dogsMapsList = dados.map((e) => DogModel.fromMap(e)).toList();
+
+      return dogsMapsList;
     } on DioError catch (e) {
       log('Erro ao buscar dados', error: e);
       throw Exception('Erro ao buscar dados');

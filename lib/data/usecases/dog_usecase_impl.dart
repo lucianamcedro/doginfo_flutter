@@ -11,7 +11,7 @@ class DogUsecaseImpl implements DogUsecase {
   });
 
   @override
-  Future<DogModel> getDogs() {
+  Future<List<DogModel>> getDogs() {
     return dogsRepository.getDogs();
   }
 }
