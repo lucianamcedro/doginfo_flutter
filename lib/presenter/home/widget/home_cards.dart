@@ -1,8 +1,25 @@
 import 'package:doginfo/domain/ui/dog_info_icons.dart';
+import 'package:doginfo/presenter/bloc/bloc/dogs_bloc.dart';
 import 'package:flutter/material.dart';
+import 'package:get_it/get_it.dart';
 
-class HomeCards extends StatelessWidget {
+class HomeCards extends StatefulWidget {
   const HomeCards({Key? key}) : super(key: key);
+
+  @override
+  State<HomeCards> createState() => _HomeCardsState();
+}
+
+class _HomeCardsState extends State<HomeCards> {
+  late final DogsBloc dogsBloc;
+
+  @override
+  void initState() {
+    super.initState();
+    dogsBloc = GetIt.I.get<DogsBloc>();
+
+    dogsBloc.add(OnGetDogs());
+  }
 
   @override
   Widget build(BuildContext context) {

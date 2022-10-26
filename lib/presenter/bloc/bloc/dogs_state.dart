@@ -5,7 +5,7 @@ abstract class DogsState {}
 class DogsInitial extends DogsState {}
 
 class DogsSuccess extends DogsState {
-  final DogModel dogModel;
+  final List<DogModel> dogModel;
 
   DogsSuccess({
     required this.dogModel,

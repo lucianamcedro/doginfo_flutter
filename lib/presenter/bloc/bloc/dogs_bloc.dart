@@ -13,7 +13,7 @@ class DogsBloc extends Bloc<DogsEvent, DogsState> {
     on<DogsEvent>((event, emit) async {
       if (event is OnGetDogs) {
         try {
-          final DogModel dogModel;
+          final List<DogModel> dogModel;
 
           final dogs = await dogUsecase.getDogs();
           dogModel = dogs;
