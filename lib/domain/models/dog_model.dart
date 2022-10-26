@@ -1,5 +1,3 @@
-import 'dart:convert';
-
 class DogModel {
   final String id;
   final String nome;
@@ -25,7 +23,7 @@ class DogModel {
   });
 
   Map<String, dynamic> toMap() {
-    return <String, dynamic>{
+    return {
       'id': id,
       'nome': nome,
       'avatar': avatar,
@@ -54,8 +52,21 @@ class DogModel {
     );
   }
 
-  String toJson() => json.encode(toMap());
+  static Map<String, dynamic> toJson(DogModel dogModel) => {
+        'id': dogModel.id,
+        'nome': dogModel.nome,
+        'img': dogModel.img,
+        'avatar': dogModel.avatar,
+        'descricao': dogModel.descricao,
+        'comportamento': dogModel.comportamento,
+        'historia': dogModel.historia,
+        'pelo': dogModel.pelo,
+        'tamanho': dogModel.tamanho,
+        'idade': dogModel.idade,
+      };
 
-  factory DogModel.fromJson(String source) =>
-      DogModel.fromMap(json.decode(source) as Map<String, dynamic>);
+  @override
+  String toString() {
+    return 'DogModel(id: $id, nome: $nome, img: $img, descricao: $descricao, comportamento: $comportamento, historia: $historia, pelo: $pelo, tamanho: $tamanho, idade: $idade,)';
+  }
 }
