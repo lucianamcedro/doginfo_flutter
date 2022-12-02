@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>1047818324593-qgm6ibjeiife2dm8qv3m66fmhkdchavn.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.1047818324593-qgm6ibjeiife2dm8qv3m66fmhkdchavn</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>1047818324593-gi3qc6bkd57s4t7leftdklgll2fj2s2q.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyC4Knu9ueHhVybe3MLJXng8rB1hRnCn0UE</string>
+	<key>GCM_SENDER_ID</key>
+	<string>1047818324593</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>br.com.lucianamcedro.doginfo</string>
+	<key>PROJECT_ID</key>
+	<string>dog-infoflutter</string>
+	<key>STORAGE_BUCKET</key>
+	<string>dog-infoflutter.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:1047818324593:ios:0084c409d1bc394c7669d0</string>
+</dict>
+</plist>

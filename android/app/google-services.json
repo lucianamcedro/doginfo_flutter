@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "1047818324593",
+    "project_id": "dog-infoflutter",
+    "storage_bucket": "dog-infoflutter.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1047818324593:android:45284bc780083ec17669d0",
+        "android_client_info": {
+          "package_name": "br.com.lucianamcedro.doginfo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1047818324593-gi3qc6bkd57s4t7leftdklgll2fj2s2q.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "br.com.lucianamcedro.doginfo",
+            "certificate_hash": "d907bbb7c75276d0a2ec3849db577054afdaaa0a"
+          }
+        },
+        {
+          "client_id": "1047818324593-jtcni5hgho0lgaca7bbbs3eqlge4k1d1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDSwM10O1PF8LdeaeObafZ6bM7yaSSeikM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1047818324593-jtcni5hgho0lgaca7bbbs3eqlge4k1d1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
