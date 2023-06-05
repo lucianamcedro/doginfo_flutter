@@ -1,5 +1,6 @@
 import 'package:dio/dio.dart';
-import 'package:doginfo/data/usecases/dog_usecase.dart';
+import 'package:doginfo/data/usecases/usecase.dart';
+
 import 'package:doginfo/domain/models/dog_model.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 

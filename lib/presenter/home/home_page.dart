@@ -24,7 +24,7 @@ class HomePage extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.only(left: 10.0),
               child: Text(
-                'Dogs',
+                'AuMigos',
                 style: GoogleFonts.fredokaOne().copyWith(
                     color: Colors.grey[800], fontWeight: FontWeight.bold),
               ),
