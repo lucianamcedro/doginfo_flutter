@@ -8,7 +8,7 @@ class HomeHeader extends StatelessWidget {
   Widget build(BuildContext context) {
     final double screenHeight = MediaQuery.of(context).size.height;
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 20),
+      padding: const EdgeInsets.symmetric(horizontal: 10.0, vertical: 20),
       child: Column(
         children: [
           Align(
@@ -34,7 +34,7 @@ class HomeHeader extends StatelessWidget {
                     borderSide: const BorderSide(color: Colors.black12)),
                 fillColor: Colors.black,
                 filled: true,
-                labelText: 'Procurar dog..',
+                labelText: 'Procurar raça..',
                 labelStyle: const TextStyle(
                   fontSize: 15,
                   color: Colors.white,
@@ -48,17 +48,14 @@ class HomeHeader extends StatelessWidget {
               ),
             ),
           ),
-          SizedBox(
-            height: screenHeight * 0.02,
-          ),
           Align(
             alignment: Alignment.topLeft,
             child: Padding(
-              padding: const EdgeInsets.only(left: 20.0),
+              padding: const EdgeInsets.only(left: 8.0),
               child: Text(
-                'Dog\'s',
+                'Todas as raças',
                 style: GoogleFonts.titanOne()
-                    .copyWith(color: Colors.grey[800], fontSize: 25),
+                    .copyWith(color: Colors.grey[800], fontSize: 20),
               ),
             ),
           ),

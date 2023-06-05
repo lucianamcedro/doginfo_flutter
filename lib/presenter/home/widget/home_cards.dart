@@ -1,6 +1,6 @@
 import 'package:doginfo/domain/ui/dog_info_icons.dart';
-import 'package:doginfo/presenter/bloc/bloc/dogs_bloc.dart';
-import 'package:doginfo/presenter/pages.dart';
+import 'package:doginfo/presenter/bloc/dogs_bloc.dart';
+import 'package:doginfo/presenter/details/details_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get_it/get_it.dart';

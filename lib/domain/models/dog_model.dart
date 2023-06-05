@@ -1,3 +1,6 @@
+// ignore_for_file: public_member_api_docs, sort_constructors_first
+import 'dart:convert';
+
 class DogModel {
   final String id;
   final String nome;
@@ -23,11 +26,11 @@ class DogModel {
   });
 
   Map<String, dynamic> toMap() {
-    return {
+    return <String, dynamic>{
       'id': id,
       'nome': nome,
-      'avatar': avatar,
       'img': img,
+      'avatar': avatar,
       'descricao': descricao,
       'comportamento': comportamento,
       'historia': historia,
@@ -39,34 +42,26 @@ class DogModel {
 
   factory DogModel.fromMap(Map<String, dynamic> map) {
     return DogModel(
-      id: map['id'],
-      nome: map['nome'],
-      img: map['img'],
-      avatar: map['avatar'],
-      descricao: map['descricao'],
-      comportamento: map['comportamento'],
-      historia: map['historia'],
-      pelo: map['pelo'],
-      tamanho: map['tamanho'],
-      idade: map['idade'],
+      id: map['id'] as String,
+      nome: map['nome'] as String,
+      img: map['img'] as String,
+      avatar: map['avatar'] as String,
+      descricao: map['descricao'] as String,
+      comportamento: map['comportamento'] as String,
+      historia: map['historia'] as String,
+      pelo: map['pelo'] as String,
+      tamanho: map['tamanho'] as String,
+      idade: map['idade'] as String,
     );
   }
-
-  static Map<String, dynamic> toJson(DogModel dogModel) => {
-        'id': dogModel.id,
-        'nome': dogModel.nome,
-        'img': dogModel.img,
-        'avatar': dogModel.avatar,
-        'descricao': dogModel.descricao,
-        'comportamento': dogModel.comportamento,
-        'historia': dogModel.historia,
-        'pelo': dogModel.pelo,
-        'tamanho': dogModel.tamanho,
-        'idade': dogModel.idade,
-      };
 
   @override
   String toString() {
     return 'DogModel(id: $id, nome: $nome, img: $img, descricao: $descricao, comportamento: $comportamento, historia: $historia, pelo: $pelo, tamanho: $tamanho, idade: $idade,)';
   }
+
+  String toJson() => json.encode(toMap());
+
+  factory DogModel.fromJson(String source) =>
+      DogModel.fromMap(json.decode(source) as Map<String, dynamic>);
 }

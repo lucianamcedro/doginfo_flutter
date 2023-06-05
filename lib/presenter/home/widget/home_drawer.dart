@@ -1,3 +1,4 @@
+import 'package:doginfo/presenter/pages.dart';
 import 'package:flutter/material.dart';
 
 class HomeDrawer extends StatelessWidget {
@@ -37,19 +38,20 @@ class HomeDrawer extends StatelessWidget {
           ListTile(
             title: const Text('Meus Favoritos'),
             onTap: () {
-              Navigator.pop(context);
+              const FavoritesPage();
             },
           ),
           ListTile(
             title: const Text('Quem sou eu'),
             onTap: () {
               Navigator.pop(context);
+              const FavoritesPage();
             },
           ),
           ListTile(
             title: const Text('Sair'),
             onTap: () {
-              Navigator.pop(context);
+              const LoginPage();
             },
           ),
         ],

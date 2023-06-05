@@ -1,7 +1,9 @@
 import 'dart:convert';
 import 'dart:developer';
+
+import 'package:flutter/services.dart' show rootBundle;
 import 'package:doginfo/domain/models/dog_model.dart';
-import 'package:flutter/services.dart';
+
 import './dogs_repository.dart';
 
 class DogsRepositoryImpl implements DogsRepository {

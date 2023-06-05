@@ -1,6 +1,5 @@
 import 'package:dio/dio.dart';
-import 'package:doginfo/data/usecases/usecase.dart';
-
+import 'package:doginfo/data/usecases/dog_usecase.dart';
 import 'package:doginfo/domain/models/dog_model.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -20,7 +19,7 @@ class DogsBloc extends Bloc<DogsEvent, DogsState> {
           dogModel = dogs;
           emit(DogsSuccess(dogModel: dogModel));
         } on DioError catch (error) {
-          emit(DogsFailed(error: error.message));
+          emit(DogsFailed(error: error.message!));
         }
       }
     });
